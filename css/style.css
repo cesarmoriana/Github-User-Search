@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background: #dfdfe2;
+  color: #000;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  line-height: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+body.dark-mode, body.dark-mode #app main .stats {
+  background: black;
+  color: #fff;
+}
+
+body.dark-mode #app main .searchbar, body.dark-mode #app main .searchbar label input, body.dark-mode #app main .profile {
+  background: #252a35;
+  color: #fff;
+}
+
+body.dark-mode #app header .theme-switch .dark {
+  display: none;
+}
+
+body.dark-mode #app header .theme-switch .light {
+  display: flex;
+}
+
+.btn {
+  background: #0079ff;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
+
+.theme-switch input[type="checkbox"] {
+  display: none;
+}
+
+.theme-switch label {
+  border: 2px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 80px;
+  height: 25px;
+}
+
+#app {
+  max-width: 375px;
+  margin: 2rem 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  #app {
+    max-width: 573px;
+    margin: 140px 98px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #app {
+    max-width: 730px;
+  }
+}
+
+#app header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#app header div, #app header div label {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#app header div label p, #app header div label label p {
+  padding-right: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  user-select: none;
+}
+
+#app header div label img, #app header div label label img {
+  user-select: none;
+}
+
+#app header .theme-switch .dark {
+  display: flex;
+}
+
+#app header .theme-switch .light {
+  display: none;
+}
+
+#app main .searchbar {
+  background: #fefefe;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .searchbar {
+    padding: 0.6rem 0.6rem 0.6rem 2.1rem;
+  }
+}
+
+#app main .searchbar label {
+  display: flex;
+  width: 100%;
+}
+
+#app main .searchbar label img {
+  padding: 0.5rem;
+}
+
+#app main .searchbar label input {
+  background: #fefefe;
+  width: 95%;
+  font-family: 'Space Mono', monospace;
+  color: #000;
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .searchbar label input {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .searchbar label input {
+    width: 98%;
+  }
+}
+
+#app main .profile {
+  background: #fefefe;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 2rem 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .profile {
+    padding: 2.6rem;
+    grid-template-columns: 120px 1fr;
+    gap: 2.3rem 2.6rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .profile {
+    padding: 3.2rem;
+  }
+}
+
+#app main .profile .avatar {
+  grid-column: 1;
+  grid-row: 1;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .profile .avatar {
+    grid-row: 1 / span 4;
+  }
+}
+
+#app main .profile .avatar img {
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+#app main .profile .info {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .profile .info {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .profile .info {
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+#app main .profile .info .name {
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .profile .info .name {
+    font-size: 1.7rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .profile .info .name {
+    flex-basis: 50%;
+    order: 1;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .profile .info .join_date {
+    flex-basis: 50%;
+    order: 2;
+    text-align: right;
+  }
+}
+
+#app main .profile .info .username {
+  color: #0079ff;
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .profile .info .username {
+    flex-basis: 50%;
+    order: 3;
+  }
+}
+
+#app main .profile .bio, #app main .profile .stats, #app main .profile .socials {
+  grid-column: 1 / span 2;
+}
+
+#app main .profile .stats {
+  background: #f6f8ff;
+  border-radius: 10px;
+  padding: 0.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .profile .stats {
+    padding: 1rem 2.1rem;
+    justify-content: space-around;
+  }
+}
+
+#app main .profile .stats .stat {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .profile .stats .stat {
+    text-align: left;
+  }
+}
+
+#app main .profile .stats .value {
+  font-weight: bold;
+}
+
+#app main .profile .socials {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 768px) {
+  #app main .profile .socials {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    column-gap: 0.5rem;
+  }
+  #app main .profile .socials .location {
+    flex-basis: 49%;
+    order: 1;
+  }
+  #app main .profile .socials .twitter {
+    flex-basis: 49%;
+    order: 2;
+  }
+  #app main .profile .socials .website {
+    flex-basis: 49%;
+    order: 3;
+  }
+  #app main .profile .socials .company {
+    flex-basis: 49%;
+    order: 4;
+  }
+}
+
+#app main .profile .socials .social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#app main .profile .socials .social .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: center;
+}
+
+#app main .profile .socials .social p {
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 1440px) {
+  #app main .profile .bio, #app main .profile .stats, #app main .profile .socials {
+    grid-column: 2;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>GitHub User Search App</title>
+</head>
+
+<body class="dark-mode">
+  <div id="app">
+    <!-- Title/Theme Switcher -->
+    <header>
+      <h1>GitHub User Finder</h1>
+      <div class="theme-switch">
+        <input type="checkbox" id="toggle" checked>
+        <label id="togglelabel" for="toggle">
+          <p class="light">Light</p>
+          <p class="dark">Dark</p>
+          <img draggable="false" class="light" src="img/icon-sun.svg" alt="">
+          <img draggable="false" class="dark" src="img/icon-moon.svg" alt="">
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <!-- Searchbar -->
+      <div class="searchbar">
+
+        <label for="input">
+          <input type="search" name="user-input" id="input" placeholder="Search Github Username...">
+        </label>
+        <button class="btn" id="submit">Search</button>
+
+        <div class="error">
+          <p id="no-results">Not Found</p>
+        </div>
+      </div>
+
+      <!-- Profile -->
+      <div class="profile">
+
+        <!-- Avatar -->
+        <div class="avatar">
+          <img id="avatar" src="img/profilepic.png" alt="">
+        </div>
+
+        <!-- Info -->
+        <div class="info">
+          <h2 id="name" class="name"></h2>
+          <p id="user" class="username"></p>
+          <p id="date" class="join_date">Joined Jan 25, 2011</p>
+        </div>
+
+        <div class="bio">
+          <p id="bio" class="">This profile has no bio</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+          <div class="stat">
+            <p class="label">Repos</p>
+            <p id="repos" class="value">8</p>
+          </div>
+          <div class="stat">
+            <p class="label">Followers</p>
+            <p id="followers" class="value">3998</p>
+          </div>
+          <div class="stat">
+            <p class="label">Following</p>
+            <p id="following" class="value">9</p>
+          </div>
+        </div>
+
+        <!-- Socials -->
+        <div class="socials">
+          <div id="location-div" class="social location">
+            <div class="icon">
+              <img src="img/icon-location.svg" alt="Location">
+            </div>
+            <p id="location">Barcelona</p>
+          </div>
+          <div id="website-div" class="social website">
+            <div class="icon">
+              <img src="img/icon-website.svg" alt="Website">
+            </div>
+            <p id="website"><a href="https://github.blog" target="_blank">https://github.blog</a></p>
+          </div>
+          <div id="twitter-div" class="social twitter">
+            <div class="icon">
+              <img src="img/icon-twitter.svg" alt="Twitter">
+            </div>
+            <p id="twitter">Not Available</p>
+          </div>
+          <div id="company-div" class="social company">
+            <div class="icon">
+              <img src="img/icon-company.svg" alt="Company">
+            </div>
+            <p id="company">@github</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
